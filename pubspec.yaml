@@ -46,12 +46,20 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - images/numpy.png
-    - images/pandas.png
-    - images/sci-kit-learn.png
+    - images/c.png
+    - images/cpp.png
+    - images/java.png
+    - images/javascript.png
+    - images/Python.png
     - images/splash_screen.jpg
-    - images/tensorflow.png
-    - images/kivy.png
+    - images/bad.png
+    - images/good.png
+    - images/success.png
+    - assets/c.json
+    - assets/cpp.json
+    - assets/java.json
+    - assets/javascript.json
+    - assets/python.json
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
