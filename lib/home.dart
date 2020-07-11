@@ -1,5 +1,6 @@
 import 'package:QuizBuzz/quizpage.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -8,20 +9,28 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   List<String> images = [
-    "images/pandas.png",
-    "images/numpy.png",
-    "images/sci-kit-learn.png",
-    "images/kivy.png",
-    "images/tensorflow.png",
+    "images/Python.png",
+    "images/c.png",
+    "images/cpp.png",
+    "images/java.png",
+    "images/javascript.png",
   ];
 
-  Widget customcard(quizName, logo) {
+  List<String> description = [
+    "Python is one of the most popular and fastest programming language since half a decade.\nIf You think you have learnt it.. \nJust test yourself !!",
+    "Java has always been one of the best choices for Enterprise World. If you think you have learn the Language...\nJust Test Yourself !!",
+    "Javascript is one of the most Popular programming language supporting the Web.\nIt has a wide range of Libraries making it Very Powerful !",
+    "C++, being a statically typed programming language is very powerful and Fast.\nit's DMA feature makes it more useful. !",
+    "C is a high-level and general-purpose programming language that is ideal for developing firmware or portable applications"
+  ];
+
+  Widget customcard(String langname, String image, String description) {
     return Padding(
         padding: EdgeInsets.all(20.0),
         child: InkWell(
           onTap: () {
             Navigator.of(context).pushReplacement(MaterialPageRoute(
-              builder: (context) => getjson(),
+              builder: (context) => getjson(langname),
             ));
           },
           child: Material(
@@ -41,22 +50,22 @@ class _HomePageState extends State<HomePage> {
                       elevation: 5.0,
                       borderRadius: BorderRadius.circular(100.0),
                       child: Container(
-                        child: ClipOval(
-                          child: Align(
-                            heightFactor: 1.0,
-                            widthFactor: 0.7,
-                            child: Image(
-                              fit: BoxFit.cover,
-                              image: AssetImage(logo),
+                        height: 150.0,
+                        width: 150.0,
+                        child: ClipOval(            
+                          child: Image(
+                            fit: BoxFit.cover,
+                            image: AssetImage(
+                              image
+                                ),
                             ),
-                          ),
                         ),
                       ),
                     ),
                   ),
                   Center(
                     child: Text(
-                      quizName,
+                      langname,
                       style: TextStyle(
                         fontSize: 24.0,
                         fontFamily: "Slabo27px",
@@ -68,7 +77,7 @@ class _HomePageState extends State<HomePage> {
                   Container(
                     padding: EdgeInsets.all(20.0),
                     child: Text(
-                      "this /n is /n some /n descriptipn",
+                      description,
                       style: TextStyle(fontSize: 18.0, color: Colors.white),
                       maxLines: 5,
                       textAlign: TextAlign.justify,
@@ -83,6 +92,9 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+      SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitDown, DeviceOrientation.portraitUp
+    ]);
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -94,11 +106,11 @@ class _HomePageState extends State<HomePage> {
       ),
       body: ListView(
         children: <Widget>[
-          customcard("Pandas", images[0]),
-          customcard("Numpy", images[1]),
-          customcard("Sci-Kit-Learn", images[2]),
-          customcard("Kivy", images[3]),
-          customcard("Tensor Flow", images[4]),
+          customcard("Python", images[0], description[0]),
+          customcard("C", images[1], description[1]),
+          customcard("Cpp", images[2], description[2]),
+          customcard("Java", images[3], description[3]),
+          customcard("JavaScript", images[4], description[4]),
         ],
       ),
     );
