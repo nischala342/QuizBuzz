@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'dart:convert';
-import 'dart:math';
 import 'package:flutter/services.dart';
 import 'package:QuizBuzz/resultpage.dart';
 import 'dart:async';
 
+// ignore: camel_case_types
+// ignore: must_be_immutable
 // ignore: camel_case_types
 class getjson extends StatelessWidget {
   // accept languagename
@@ -83,7 +84,7 @@ class _QuizPageState extends State<QuizPage> {
 
   bool canceltimer = false;
 
- genarray() {
+  genarray() {
     var distinctIds = [];
     for (int i = 0; i < 10; i++) {
       distinctIds.add(i);
@@ -98,7 +99,6 @@ class _QuizPageState extends State<QuizPage> {
     genarray();
     super.initState();
   }
-
 
   @override
   void setState(fn) {

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:QuizBuzz/home.dart';
 
+// ignore: camel_case_types
+// ignore: must_be_immutable
 class resultpage extends StatefulWidget {
   int marks;
   resultpage({Key key, @required this.marks}) : super(key: key);
