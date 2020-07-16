@@ -83,17 +83,11 @@ class _QuizPageState extends State<QuizPage> {
 
   bool canceltimer = false;
 
-  genrandomarray() {
+ genarray() {
     var distinctIds = [];
-    var rand = new Random();
-    for (int i = 0;;) {
-      distinctIds.add(rand.nextInt(10));
+    for (int i = 0; i < 10; i++) {
+      distinctIds.add(i);
       random_array = distinctIds.toSet().toList();
-      if (random_array.length < 10) {
-        continue;
-      } else {
-        break;
-      }
     }
     print(random_array);
   }
@@ -101,9 +95,10 @@ class _QuizPageState extends State<QuizPage> {
   @override
   void initState() {
     starttimer();
-    genrandomarray();
+    genarray();
     super.initState();
   }
+
 
   @override
   void setState(fn) {
