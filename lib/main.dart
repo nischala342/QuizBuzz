@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "QuizzBuzz",
-      theme: ThemeData(primarySwatch: Colors.deepOrange),
+      theme: ThemeData(primarySwatch: Colors.grey),
       home: SplashScreen(),
     );
   }

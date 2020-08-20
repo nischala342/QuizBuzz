@@ -37,6 +37,7 @@ class getjson extends StatelessWidget {
         List mydata = json.decode(snapshot.data.toString());
         if (mydata == null) {
           return Scaffold(
+            backgroundColor: Colors.black,
             body: Center(
               child: Text(
                 "Loading",
@@ -63,7 +64,7 @@ class _QuizPageState extends State<QuizPage> {
   var mydata;
   _QuizPageState(this.mydata);
 
-  Color colortoshow = Colors.indigoAccent;
+  Color colortoshow = Colors.black12;
   Color right = Colors.green;
   Color wrong = Colors.red;
   int marks = 0;
@@ -75,10 +76,10 @@ class _QuizPageState extends State<QuizPage> {
   var random_array;
 
   Map<String, Color> btncolor = {
-    "a": Colors.indigoAccent,
-    "b": Colors.indigoAccent,
-    "c": Colors.indigoAccent,
-    "d": Colors.indigoAccent,
+    "a": Colors.black,
+    "b": Colors.black,
+    "c": Colors.black,
+    "d": Colors.black,
   };
 
   bool canceltimer = false;
@@ -141,10 +142,10 @@ class _QuizPageState extends State<QuizPage> {
           builder: (context) => resultpage(marks: marks),
         ));
       }
-      btncolor["a"] = Colors.indigoAccent;
-      btncolor["b"] = Colors.indigoAccent;
-      btncolor["c"] = Colors.indigoAccent;
-      btncolor["d"] = Colors.indigoAccent;
+      btncolor["a"] = Colors.black;
+      btncolor["b"] = Colors.black;
+      btncolor["c"] = Colors.black;
+      btncolor["d"] = Colors.black;
     });
     starttimer();
   }
@@ -182,8 +183,8 @@ class _QuizPageState extends State<QuizPage> {
           maxLines: 1,
         ),
         color: btncolor[k],
-        splashColor: Colors.indigo[700],
-        highlightColor: Colors.indigo[700],
+        splashColor: Colors.black,
+        highlightColor: Colors.black,
         minWidth: 200.0,
         height: 45.0,
         shape:
@@ -218,6 +219,7 @@ class _QuizPageState extends State<QuizPage> {
                 ));
       },
       child: Scaffold(
+        backgroundColor: Colors.grey[700],
         body: Column(
           children: <Widget>[
             Expanded(
@@ -228,7 +230,7 @@ class _QuizPageState extends State<QuizPage> {
                 child: Text(
                   mydata[0][i.toString()],
                   style: TextStyle(
-                    fontSize: 16.0,
+                    fontSize: 19.0,
                     fontFamily: "Slabo27px",
                   ),
                 ),

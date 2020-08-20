@@ -105,8 +105,8 @@ class _resultpageState extends State<resultpage> {
                     vertical: 10.0,
                     horizontal: 25.0,
                   ),
-                  borderSide: BorderSide(width: 3.0, color: Colors.indigo),
-                  splashColor: Colors.indigoAccent,
+                  borderSide: BorderSide(width: 3.0, color: Colors.black),
+                  splashColor: Colors.grey,
                 )
               ],
             ),

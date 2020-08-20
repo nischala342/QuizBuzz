@@ -18,10 +18,10 @@ class _HomePageState extends State<HomePage> {
 
   List<String> description = [
     "Python is one of the most popular and fastest programming language since half a decade.\nIf You think you have learnt it.. \nJust test yourself !!",
-    "Java has always been one of the best choices for Enterprise World. If you think you have learn the Language...\nJust Test Yourself !!",
-    "Javascript is one of the most Popular programming language supporting the Web.\nIt has a wide range of Libraries making it Very Powerful !",
+    "C is a high-level and general-purpose programming language that is ideal for developing firmware or portable applications",
     "C++, being a statically typed programming language is very powerful and Fast.\nit's DMA feature makes it more useful. !",
-    "C is a high-level and general-purpose programming language that is ideal for developing firmware or portable applications"
+    "Java has always been one of the best choices for Enterprise World. If you think you have learn the Language...\nJust Test Yourself !!",
+    "Javascript is one of the most Popular programming language supporting the Web.\nIt has a wide range of Libraries making it Very Powerful !"
   ];
 
   Widget customcard(String langname, String image, String description) {
@@ -34,7 +34,7 @@ class _HomePageState extends State<HomePage> {
             ));
           },
           child: Material(
-            color: Colors.deepOrangeAccent,
+            color: Colors.black,
             elevation: 10.0,
             borderRadius: BorderRadius.circular(2.0),
             child: Container(
@@ -52,13 +52,11 @@ class _HomePageState extends State<HomePage> {
                       child: Container(
                         height: 150.0,
                         width: 150.0,
-                        child: ClipOval(            
+                        child: ClipOval(
                           child: Image(
                             fit: BoxFit.cover,
-                            image: AssetImage(
-                              image
-                                ),
-                            ),
+                            image: AssetImage(image),
+                          ),
                         ),
                       ),
                     ),
@@ -92,16 +90,18 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-      SystemChrome.setPreferredOrientations([
-      DeviceOrientation.portraitDown, DeviceOrientation.portraitUp
-    ]);
+    SystemChrome.setPreferredOrientations(
+        [DeviceOrientation.portraitDown, DeviceOrientation.portraitUp]);
     return Scaffold(
+      backgroundColor: Colors.grey[900],
       appBar: AppBar(
         title: Text(
           "QuizzBuzz",
-          style: TextStyle(fontFamily: "Galada", fontSize: 25.0),
+          style: TextStyle(
+              color: Colors.white, fontFamily: "Galada", fontSize: 27.0),
         ),
         centerTitle: true,
+        backgroundColor: Colors.black,
         titleSpacing: 2.0,
       ),
       body: ListView(
