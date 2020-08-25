@@ -1,6 +1,7 @@
 import 'package:QuizBuzz/quizpage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
@@ -9,18 +10,30 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   List<String> images = [
     "images/Python.png",
-    "images/c.png",
-    "images/cpp.png",
-    "images/java.png",
-    "images/javascript.png",
+    "images/canada.png",
+    "images/france.jpg",
+    "images/india.png",
+    "images/italy.png",
+    "images/japan.png",
+    "images/nigeria.jpg",
+    "images/russia.jpg",
+    "images/southafrica.jpg",
+    "images/uk.png",
+    "images/usa.png",
   ];
 
   List<String> description = [
-    "Python is one of the most popular and fastest programming language since half a decade.\nIf You think you have learnt it.. \nJust test yourself !!",
-    "C is a high-level and general-purpose programming language that is ideal for developing firmware or portable applications",
-    "C++, being a statically typed programming language is very powerful and Fast.\nit's DMA feature makes it more useful. !",
-    "Java has always been one of the best choices for Enterprise World. If you think you have learn the Language...\nJust Test Yourself !!",
-    "Javascript is one of the most Popular programming language supporting the Web.\nIt has a wide range of Libraries making it Very Powerful !"
+    "Australia,the smallest continent and one of the largest countries on Earth, lying between the Pacific and Indian oceans in the Southern Hemisphere.",
+    "Canada is the second largest country in the world(after Russia) by land mass.",
+    "France,the largest country in Western Europe, has long been a gateway between the continent's northern and southern regions.",
+    "India,the seventh largest country by land area, and the most populous democracy in the world.",
+    "Italy,country of south-central Europe,occupying a peninsula that juts deep into the Mediterranean Sea.",
+    "Japan is an archipelago, or string of islands, on the eastern edge of Asia.",
+    "Nigeria is a multi-ethnic and culturally diverse federation which consists of 36 autonomous states and the Federal Capital Territory.",
+    "Russia, the largest country in the world, occupies one-tenth of all the land on Earth. It spans 11 time zones across two continents (Europe and Asia) and has coasts on three oceans (the Atlantic, Pacific, and Arctic)",
+    "South Africa, the southernmost country on the African continent, renowned for its varied topography, great natural beauty, and cultural diversity.",
+    "The United Kingdom, also called the U.K., consists of a group of islands off the northwest coast of Europe. It is a unique country made up of four nations: England, Wales, Scotland, and Northern Ireland.",
+    "The United States of America is the world's third largest country in size and nearly the third largest in terms of population."
   ];
 
   Widget customcard(String langname, String image, String description) {
@@ -49,9 +62,9 @@ class _HomePageState extends State<HomePage> {
                       elevation: 5.0,
                       borderRadius: BorderRadius.circular(100.0),
                       child: Container(
-                        height: 150.0,
-                        width: 150.0,
-                        child: ClipOval(
+                        height: 148.0,
+                        width: 280.0,
+                        child: ClipRect(
                           child: Image(
                             fit: BoxFit.cover,
                             image: AssetImage(image),
@@ -92,7 +105,6 @@ class _HomePageState extends State<HomePage> {
     SystemChrome.setPreferredOrientations(
         [DeviceOrientation.portraitDown, DeviceOrientation.portraitUp]);
     return Scaffold(
-       
       backgroundColor: Colors.grey[900],
       appBar: AppBar(
         title: Text(
@@ -106,11 +118,17 @@ class _HomePageState extends State<HomePage> {
       ),
       body: ListView(
         children: <Widget>[
-          customcard("Python", images[0], description[0]),
-          customcard("C", images[1], description[1]),
-          customcard("Cpp", images[2], description[2]),
-          customcard("Java", images[3], description[3]),
-          customcard("JavaScript", images[4], description[4]),
+          customcard("Australia", images[0], description[0]),
+          customcard("Canada", images[1], description[1]),
+          customcard("France", images[2], description[2]),
+          customcard("India", images[3], description[3]),
+          customcard("Italy", images[4], description[4]),
+          customcard("Japan", images[5], description[5]),
+          customcard("Nigeria", images[6], description[6]),
+          customcard("Russia", images[7], description[7]),
+          customcard("South Africa", images[8], description[8]),
+          customcard("UK", images[9], description[9]),
+          customcard("USA", images[10], description[10]),
         ],
       ),
     );

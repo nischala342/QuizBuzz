@@ -46,15 +46,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - images/c.png
-    - images/cpp.png
-    - images/java.png
-    - images/javascript.png
-    - images/Python.png
-    - images/splash_screen.jpg
-    - images/bad.png
-    - images/good.png
-    - images/success.png
+    - images/
     - assets/c.json
     - assets/cpp.json
     - assets/java.json
