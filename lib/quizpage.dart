@@ -23,7 +23,7 @@ class getjson extends StatelessWidget {
     } else if (langname == "Cpp") {
       assettoload = "assets/cpp.json";
     } else {
-      assettoload = "assets/c.json";
+      assettoload = "assets/india.json";
     }
   }
 
