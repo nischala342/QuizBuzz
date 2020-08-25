@@ -65,6 +65,11 @@ flutter:
     - assets/australia.json
     - assets/canada.json
     - assets/japan.json
+    - assets/russia.json
+    - assets/italy.json
+    - assets/southafrica.json
+    - assets/nigeria.json
+    - assets/france.json
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
