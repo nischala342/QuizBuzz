@@ -14,14 +14,28 @@ class getjson extends StatelessWidget {
   String assettoload;
   //sets the assest to particular json file and opens it
   setasset() {
-    if (langname == "Python") {
-      assettoload = "assets/python.json";
-    } else if (langname == "Java") {
-      assettoload = "assets/java.json";
-    } else if (langname == "JavaScript") {
-      assettoload = "assets/javascript.json";
-    } else if (langname == "Cpp") {
-      assettoload = "assets/cpp.json";
+    if (langname == "Australia") {
+      assettoload = "assets/australia.json";
+    } else if (langname == "Canada") {
+      assettoload = "assets/canada.json";
+    } else if (langname == "France") {
+      assettoload = "assets/france.json";
+    } else if (langname == "India") {
+      assettoload = "assets/india.json";
+    } else if (langname == "Italy") {
+      assettoload = "assets/italy.json";
+    } else if (langname == "Japan") {
+      assettoload = "assets/japan.json";
+    } else if (langname == "Nigeria") {
+      assettoload = "assets/nigeria.json";
+    } else if (langname == "Russia") {
+      assettoload = "assets/russia.json";
+    } else if (langname == "South Africa") {
+      assettoload = "assets/southafrica.json";
+    } else if (langname == "UK") {
+      assettoload = "assets/uk.json";
+    } else if (langname == "USA") {
+      assettoload = "assets/usa.json";
     } else {
       assettoload = "assets/india.json";
     }
@@ -214,7 +228,7 @@ class _QuizPageState extends State<QuizPage> {
                 ));
       },
       child: Scaffold(
-        backgroundColor: Colors.grey[700],
+        backgroundColor: Colors.grey[50],
         body: Column(
           children: <Widget>[
             Expanded(
@@ -225,7 +239,7 @@ class _QuizPageState extends State<QuizPage> {
                 child: Text(
                   mydata[0][i.toString()],
                   style: TextStyle(
-                    fontSize: 19.0,
+                    fontSize: 24.0,
                     fontFamily: "Slabo27px",
                   ),
                 ),
