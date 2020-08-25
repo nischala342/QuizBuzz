@@ -1,7 +1,6 @@
 import 'package:QuizBuzz/quizpage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
@@ -93,6 +92,7 @@ class _HomePageState extends State<HomePage> {
     SystemChrome.setPreferredOrientations(
         [DeviceOrientation.portraitDown, DeviceOrientation.portraitUp]);
     return Scaffold(
+       
       backgroundColor: Colors.grey[900],
       appBar: AppBar(
         title: Text(
