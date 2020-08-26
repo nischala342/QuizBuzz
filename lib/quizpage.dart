@@ -101,7 +101,7 @@ class _QuizPageState extends State<QuizPage> {
 
   genarray() {
     var distinctIds = [];
-    for (int i = 0; i < 10; i++) {
+    for (int i = 1; i <= 10; i++) {
       distinctIds.add(i);
       random_array = distinctIds.toSet().toList();
     }
