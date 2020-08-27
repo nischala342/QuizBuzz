@@ -106,7 +106,7 @@ class _HomePageState extends State<HomePage> {
     SystemChrome.setPreferredOrientations(
         [DeviceOrientation.portraitDown, DeviceOrientation.portraitUp]);
     return Scaffold(
-      backgroundColor: Colors.grey[900],
+      backgroundColor: Colors.grey[50],
       appBar: AppBar(
         actions: <Widget>[
           IconButton(

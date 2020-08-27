@@ -59,8 +59,8 @@ class _resultpageState extends State<resultpage> {
                   children: <Widget>[
                     Material(
                       child: Container(
-                        width: 300.0,
-                        height: 300.0,
+                        width: 500.0,
+                        height: 400.0,
                         child: ClipRect(
                           child: Image(
                             image: AssetImage(
@@ -70,15 +70,16 @@ class _resultpageState extends State<resultpage> {
                         ),
                       ),
                     ),
-                    Padding(
+                    Container(
                         padding: EdgeInsets.symmetric(
-                          vertical: 5.0,
-                          horizontal: 15.0,
+                          vertical: 32.0,
+                          horizontal: 18.0,
                         ),
                         child: Center(
                           child: Text(
                             message,
                             style: TextStyle(
+                              fontWeight: FontWeight.bold,
                               fontSize: 18.0,
                               fontFamily: "Slab027px",
                             ),

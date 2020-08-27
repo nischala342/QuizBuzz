@@ -241,6 +241,7 @@ class _QuizPageState extends State<QuizPage> {
                   style: TextStyle(
                     fontSize: 24.0,
                     fontFamily: "Slabo27px",
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
