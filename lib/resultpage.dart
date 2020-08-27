@@ -60,7 +60,7 @@ class _resultpageState extends State<resultpage> {
                     Material(
                       child: Container(
                         width: 500.0,
-                        height: 400.0,
+                        height: 250.0,
                         child: ClipRect(
                           child: Image(
                             image: AssetImage(

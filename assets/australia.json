@@ -9,7 +9,7 @@
         "7": "What is the capital of Australia?",
         "8": "What is the longest river in Australia?",
         "9": "What is the name of the large, sandstone rock in the desert centre of Australia?",
-        "10": ""
+        "10": "Which Australian bird-famous for its laughing sound?"
     },
     {
        
@@ -73,10 +73,10 @@
             "d": "The Rock of Ages"
         },
         "10": {
-            "a": "Europeans",
-            "b": "Maoris",
-            "c": "Australian Aborigines",
-            "d": "Indians"
+            "a": "Magpie",
+            "b": "Kookaburra",
+            "c": "Emu",
+            "d": "Galah"
         }
     },
     {
@@ -89,6 +89,6 @@
         "7": "Canberra",
         "8": "Murray River",
         "9": "The Rock of Ages",
-        "10": "Australian Aborigines"
+        "10": "Kookaburra"
     }
 ]
