@@ -43,7 +43,10 @@ class _resultpageState extends State<resultpage> {
       appBar: AppBar(
         title: Text(
           "Result",
+          style: TextStyle(color: Colors.white),
         ),
+        backgroundColor: Colors.black,
+        centerTitle: true,
       ),
       body: Column(
         children: <Widget>[
@@ -91,7 +94,8 @@ class _resultpageState extends State<resultpage> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                OutlineButton(
+                RaisedButton(
+                  color: Colors.black,
                   onPressed: () {
                     Navigator.of(context).pushReplacement(MaterialPageRoute(
                       builder: (context) => HomePage(),
@@ -100,6 +104,7 @@ class _resultpageState extends State<resultpage> {
                   child: Text(
                     "Continue",
                     style: TextStyle(
+                      color: Colors.white,
                       fontSize: 18.0,
                     ),
                   ),
@@ -107,8 +112,7 @@ class _resultpageState extends State<resultpage> {
                     vertical: 10.0,
                     horizontal: 25.0,
                   ),
-                  borderSide: BorderSide(width: 3.0, color: Colors.black),
-                  splashColor: Colors.grey,
+                  splashColor: Colors.grey[700],
                 )
               ],
             ),

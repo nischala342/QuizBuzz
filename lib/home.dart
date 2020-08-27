@@ -2,6 +2,7 @@ import 'package:QuizBuzz/quizpage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:QuizBuzz/search.dart';
+
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
@@ -108,20 +109,25 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.grey[900],
       appBar: AppBar(
         actions: <Widget>[
-          IconButton(onPressed: (){
-            Navigator.push(
-              context,MaterialPageRoute(builder: (context) => SearchList()));
-          }, icon: Icon(Icons.search),)
+          IconButton(
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => SearchList()));
+            },
+            icon: Icon(
+              Icons.search,
+              color: Colors.white,
+            ),
+          )
         ],
         title: Text(
-          "QuizzBuzz",
+          "QuizBuzz",
           style: TextStyle(
               color: Colors.white, fontFamily: "Galada", fontSize: 27.0),
         ),
         centerTitle: true,
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.black,
         titleSpacing: 2.0,
-
       ),
       body: ListView(
         children: <Widget>[
